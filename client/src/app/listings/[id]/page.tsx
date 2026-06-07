@@ -9,7 +9,7 @@ import { useAuth } from "@/context/AuthContext";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import Avatar from "@/components/Avatar";
 import ImageWithFallback from "@/components/ImageWithFallback";
-import OfferModal from "./OfferModal";
+
 
 export default function ListingDetail() {
   const { id } = useParams<{ id: string }>();

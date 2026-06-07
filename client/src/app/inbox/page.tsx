@@ -398,7 +398,7 @@ export default function Inbox() {
                     <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-neutral-200 shadow-xl z-10 flex flex-col">
                       <button onClick={handleDeleteChat} className="text-left px-4 py-3 text-xs font-bold uppercase tracking-widest hover:bg-neutral-50 border-b border-neutral-100">Delete Chat</button>
                       {(() => {
-                        const isBuyerParty = selectedOffer.buyerId?._id === user._id || selectedOffer.buyerId === user._id || selectedOffer.buyerId === user.id;
+                        const isBuyerParty = selectedOffer.buyerId?._id === user?._id || selectedOffer.buyerId === user?._id || selectedOffer.buyerId === user?.id;
                         const otherPartyId = isBuyerParty 
                           ? selectedOffer.listingId?.sellerId?._id || selectedOffer.listingId?.sellerId 
                           : selectedOffer.buyerId?._id || selectedOffer.buyerId;
@@ -449,7 +449,7 @@ export default function Inbox() {
               {/* Messages Area */}
               <div className="flex-1 overflow-y-auto p-4 space-y-4">
                 {messages.map((msg: any, idx: number) => {
-                  const isMe = msg.senderId?._id === user._id || msg.senderId === user._id || msg.senderId === user.id;
+                  const isMe = msg.senderId?._id === user?._id || msg.senderId === user?._id || msg.senderId === user?.id;
                   const isOffer = msg.text.startsWith('[OFFER: ');
                   
                   let offerPrice = '';
@@ -500,7 +500,7 @@ export default function Inbox() {
               {/* Input Area */}
               <div className="p-4 bg-white border-t border-neutral-200">
                 {(() => {
-                  const isBuyerParty = selectedOffer.buyerId?._id === user._id || selectedOffer.buyerId === user._id || selectedOffer.buyerId === user.id;
+                  const isBuyerParty = selectedOffer.buyerId?._id === user?._id || selectedOffer.buyerId === user?._id || selectedOffer.buyerId === user?.id;
                   const otherPartyId = isBuyerParty 
                     ? selectedOffer.listingId?.sellerId?._id || selectedOffer.listingId?.sellerId 
                     : selectedOffer.buyerId?._id || selectedOffer.buyerId;

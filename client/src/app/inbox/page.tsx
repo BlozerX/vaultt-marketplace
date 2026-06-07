@@ -235,7 +235,7 @@ export default function Inbox() {
     e.preventDefault();
     if (!selectedOffer || !token || !reportReason) return;
     try {
-      const otherPartyId = selectedOffer.buyerId?._id === user._id || selectedOffer.buyerId === user._id
+      const otherPartyId = selectedOffer.buyerId?._id === user?._id || selectedOffer.buyerId === user?._id
         ? selectedOffer.listingId?.sellerId?._id || selectedOffer.listingId?.sellerId
         : selectedOffer.buyerId?._id || selectedOffer.buyerId;
 
@@ -285,7 +285,7 @@ export default function Inbox() {
               </div>
             ) : (
               offers.map((offer) => {
-                const isBuyer = offer.buyerId._id === user._id || offer.buyerId === user._id;
+                const isBuyer = offer.buyerId._id === user?._id || offer.buyerId === user?._id;
                 const otherParty = isBuyer 
                   ? offer.listingId?.sellerId 
                   : offer.buyerId;
@@ -373,7 +373,7 @@ export default function Inbox() {
 
                 <div className="flex items-center gap-4 relative">
                   {/* Seller Actions */}
-                  {(selectedOffer.buyerId?._id !== user._id && selectedOffer.buyerId !== user._id && selectedOffer.buyerId !== user.id) && selectedOffer.status === 'pending' && (
+                  {(selectedOffer.buyerId?._id !== user?._id && selectedOffer.buyerId !== user?._id && selectedOffer.buyerId !== user?.id) && selectedOffer.status === 'pending' && (
                     <div className="flex gap-2">
                       <button 
                         onClick={() => handleStatusChange('accepted')}

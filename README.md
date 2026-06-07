@@ -220,7 +220,3 @@ Due to the two-day time constraint, the following were scoped out:
 - Full-text search across user profiles (search currently covers listings only).
 
 ---
-
-## Notes for the Reviewer
-
-The goal was not to build a feature checklist but a coherent product. Every decision made — the offer-gated chat, the verified review system, the aesthetic choices — reflects a deliberate product opinion about what a second-hand marketplace should feel like and how it should behave. The code is structured to be readable, the API contracts are consistent, and the deployment pipeline works end-to-end without any manual intervention.

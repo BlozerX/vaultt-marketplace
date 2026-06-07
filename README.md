@@ -1,6 +1,6 @@
 # Vaultt — Second-Hand Marketplace
 
-Vaultt is a full-stack, production-deployed web platform for buying and selling second-hand goods. It was built as the take-home assignment for the Software Developer Intern role at Equitable Technologies. The platform is designed around a niche audience — curated luxury, archive, and streetwear — but the architecture and feature set are general-purpose enough to support any category of second-hand commerce.
+Vaultt is a full-stack, production-deployed web platform for buying and selling second-hand goods. The platform is designed around a niche audience — curated luxury, archive, and streetwear — but the architecture and feature set are general-purpose enough to support any category of second-hand commerce.
 
 The name "Vaultt" is a reference to the idea of a vault: a secure, curated archive of valuable things.
 

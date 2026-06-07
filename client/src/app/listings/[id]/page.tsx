@@ -210,7 +210,7 @@ export default function ListingDetail() {
         <div className="flex flex-col gap-3">
           <div className="relative aspect-square bg-neutral-100 overflow-hidden w-full">
             <ImageWithFallback
-              src={listing.imageUrls?.[activeImageIndex] || listing.imageUrl || ""}
+              src={listing.imageUrls?.[activeImageIndex] || ""}
               alt={listing.title}
               category={listing.category}
               className="w-full h-full object-cover transition-opacity duration-300"
@@ -415,7 +415,7 @@ export default function ListingDetail() {
               >
                 <div className="relative aspect-square w-full bg-neutral-100 overflow-hidden">
                   <ImageWithFallback
-                    src={item.imageUrls?.[0] || item.imageUrl || ""}
+                    src={item.imageUrls?.[0] || ""}
                     alt={item.title}
                     category={item.category}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

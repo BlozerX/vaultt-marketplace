@@ -361,7 +361,7 @@ export default function ProfilePage() {
               {/* Image */}
               <div className="relative aspect-square bg-neutral-100 overflow-hidden">
                 <ImageWithFallback
-                  src={item.imageUrls?.[0] || item.imageUrl || ""}
+                  src={item.imageUrls?.[0] || ""}
                   alt={item.title}
                   category={item.category}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

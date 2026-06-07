@@ -226,7 +226,7 @@ export default function SellerProfile() {
               <Link key={item._id} href={`/listings/${item._id}`} className="group border-b border-r border-neutral-200 flex flex-col relative bg-white">
                 <div className="relative aspect-square bg-neutral-100 overflow-hidden">
                   <ImageWithFallback
-                    src={item.imageUrls?.[0] || item.imageUrl || ""}
+                    src={item.imageUrls?.[0] || ""}
                     alt={item.title}
                     category={item.category}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

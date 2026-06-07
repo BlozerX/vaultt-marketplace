@@ -57,7 +57,7 @@ export default function EditListing() {
           status: data.status || "active",
           negotiable: data.negotiable || false,
         });
-        setExistingImages(data.imageUrls || (data.imageUrl ? [data.imageUrl] : []));
+        setExistingImages(data.imageUrls || []);
       })
       .catch(() => setError("Failed to load listing"))
       .finally(() => setLoading(false));

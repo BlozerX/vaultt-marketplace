@@ -349,7 +349,7 @@ export default function Inbox() {
                   </button>
                   <div className="w-10 h-10 bg-neutral-100 flex-shrink-0">
                     <ImageWithFallback 
-                      src={selectedOffer.listingId?.imageUrls?.[0] || selectedOffer.listingId?.imageUrl || ""} 
+                      src={selectedOffer.listingId?.imageUrls?.[0] || ""} 
                       alt="item" 
                       className="w-full h-full object-cover" 
                       category={selectedOffer.listingId?.category}
